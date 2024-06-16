@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author termi
- *
- */
-module Calculator {
-}
