@@ -27,6 +27,9 @@ public class JCalculator {
 		JLabel screen = new JLabel("Test");
 		screenPanel.add(screen);
 		
+		JPanel userPanel = new JPanel();
+		userPanel.setLayout(new GridLayout(1, 2));
+		
 		// Setup the button panel
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(4, 4));
@@ -37,10 +40,21 @@ public class JCalculator {
 		buttonPanel.add(new JButton("."));
 		buttonPanel.add(new JButton("Enter"));
 		
+		// Setup the panel with arithmetic operations
+		JPanel arithmeticPanel = new JPanel();
+		arithmeticPanel.setLayout(new GridLayout(4, 1));
+		arithmeticPanel.add(new JButton("+"));
+		arithmeticPanel.add(new JButton("-"));
+		arithmeticPanel.add(new JButton("*"));
+		arithmeticPanel.add(new JButton("/"));
+		
 		displayPanel.setLayout(new GridLayout(2, 1));
 		
+		userPanel.add(buttonPanel);
+		userPanel.add(arithmeticPanel);
+		
 		displayPanel.add(screenPanel);
-		displayPanel.add(buttonPanel);
+		displayPanel.add(userPanel);
 		
 		frame.setPreferredSize(new Dimension(length, height));
 		frame.setResizable(false);
