@@ -69,4 +69,10 @@ public class ButtonInteraction {
 		input += "9";
 		screen.setText(input);
 	} // Nine button pressed
+
+	// Clear button functionality
+	protected void clearButtonPressed() {
+		input = "";
+		screen.setText(input);
+	} // Clear button pressed
 } // class

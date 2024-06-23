@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
@@ -38,18 +37,103 @@ public class JCalculator {
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(4, 4));
 		for (int i = 1; i < 10; i++) {
-			buttonPanel.add(new JButton(Integer.toString(i)));
+			// buttonPanel.add(new JButton(Integer.toString(i)));
 		} // for
+
+		// One button created and functionality made.
+		JButton one = new JButton("1");
+		one.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.oneButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(one);
+
+		// Two button created and functionality made.
+		JButton two = new JButton("2");
+		two.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.twoButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(two);
+
+		// Three button created and functionality made.
+		JButton three = new JButton("3");
+		three.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.threeButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(three);
+
+		// Four button created and functionality made.
+		JButton four = new JButton("4");
+		four.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.fourButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(four);
+
+		// Five button created and functionality made.
+		JButton five = new JButton("5");
+		five.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.fiveButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(five);
+
+		// Six button created and functionality made.
+		JButton six = new JButton("6");
+		six.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.sixButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(six);
+
+		// Seven button created and functionality made.
+		JButton seven = new JButton("7");
+		seven.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.sevenButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(seven);
+
+		// Eight button created and functionality made.
+		JButton eight = new JButton("8");
+		eight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.eightButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(eight);
+
+		// Nine button created and functionality made.
+		JButton nine = new JButton("9");
+		nine.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.nineButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(nine);
+
+		// Zero button created and functionality made.
 		JButton zero = new JButton("0");
 		zero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				buttonInteraction.zeroButtonPressed();
 			} // action performed
 		}); // action listener
-
 		buttonPanel.add(zero);
+
+		// Extra buttons
 		buttonPanel.add(new JButton("."));
 		buttonPanel.add(new JButton("Enter"));
+		JButton clear = new JButton("Clear");
 
 		// Setup the panel with arithmetic operations
 		JPanel arithmeticPanel = new JPanel();
@@ -67,6 +151,14 @@ public class JCalculator {
 		JButton divide = new JButton("/");
 		arithmeticPanel.add(divide);
 
+		// Clear button created and functionality made.
+		arithmeticPanel.add(clear);
+		clear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.clearButtonPressed();
+			} // action performed
+		}); // action listener
+		
 		// Set display panel layout
 		displayPanel.setLayout(new GridLayout(2, 1));
 
