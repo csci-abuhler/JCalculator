@@ -131,7 +131,17 @@ public class JCalculator {
 		buttonPanel.add(zero);
 
 		// Extra buttons
-		buttonPanel.add(new JButton("."));
+		
+		// Decimal button and functionality made.
+		JButton decimal  = new JButton(".");
+		decimal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonInteraction.decimalButtonPressed();
+			} // action performed
+		}); // action listener
+		buttonPanel.add(decimal);
+		
+		// Extra buttons
 		buttonPanel.add(new JButton("Enter"));
 		JButton clear = new JButton("Clear");
 
