@@ -9,18 +9,18 @@ public class ButtonInteraction {
 	public JLabel getScreen() {
 		return screen;
 	} // get screen
-	
+
 	// Decimal button functionality
 	protected void decimalButtonPressed() {
-		// Check if the input is the empty string or already has a decimal in it. 
+		// Check if the input is the empty string or already has a decimal in it.
 		if (input.equals("")) {
 			input = "0.0";
 		} else if (input.indexOf(".") == -1) {
 			input += ".";
-		} // if 
+		} // if
 		screen.setText(input);
 	} // Decimal button pressed
-	
+
 	// Zero button functionality
 	protected void zeroButtonPressed() {
 		input += "0";

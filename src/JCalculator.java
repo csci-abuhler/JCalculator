@@ -129,8 +129,6 @@ public class JCalculator {
 			} // action performed
 		}); // action listener
 		buttonPanel.add(zero);
-
-		// Extra buttons
 		
 		// Decimal button and functionality made.
 		JButton decimal  = new JButton(".");
